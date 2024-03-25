@@ -1,0 +1,12 @@
+.header {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Cor do texto branco */
+    padding: 20px; /* Espaçamento interno */
+    text-align: center; /* Alinhamento centralizado */
+  }
+  
+  .header-title {
+    margin: 0; /* Remove margem padrão */
+    font-size: 32px; /* Tamanho da fonte */
+  }
+  

@@ -1,7 +1,7 @@
 const sqlite3 = require('sqlite3').verbose();
 
 function connectDatabase() {
-    const dbPath = '/home/kesia/desafio_database.db'; // Caminho para o arquivo desafio_database.db
+    const dbPath = '/home/kesia/desafio_database.db';
 
     const db = new sqlite3.Database(dbPath, (err) => {
         if (err) {

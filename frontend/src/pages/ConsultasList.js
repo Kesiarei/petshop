@@ -1,4 +1,3 @@
-// ConsultasList.js
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
 
@@ -7,8 +6,12 @@ const ConsultasList = () => {
 
   useEffect(() => {
     async function fetchConsultas() {
-      const consultasData = await api.getConsultas();
-      setConsultas(consultasData);
+      try {
+        const consultasData = await api.getConsultas();
+        setConsultas(consultasData);
+      } catch (error) {
+        console.error('Erro ao buscar as consultas:', error.message);
+      }
     }
     fetchConsultas();
   }, []);
@@ -19,7 +22,11 @@ const ConsultasList = () => {
       <ul>
         {consultas.map((consulta) => (
           <li key={consulta.id}>
-            {/* Exibir detalhes da consulta */}
+            <h3>Consulta #{consulta.id}</h3>
+            <p><strong>Pet:</strong> {consulta.pet}</p>
+            <p><strong>Cliente:</strong> {consulta.cliente}</p>
+            <p><strong>Horário:</strong> {consulta.horario}</p>
+            <p><strong>Status:</strong> {consulta.status}</p>
           </li>
         ))}
       </ul>

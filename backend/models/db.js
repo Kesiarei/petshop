@@ -1,6 +1,5 @@
 const sqlite3 = require('sqlite3').verbose();
 
-// Caminho para o arquivo do banco de dados SQLite
 const DB_PATH = '/home/kesia/desafio_database.db';
 
 // Inicialização do banco de dados

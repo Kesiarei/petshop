@@ -1,7 +1,4 @@
-// controllers/consultaController.js
-
-// Importar o modelo de Consulta
-const Consulta = require('../models/Consulta'); // Corrigido o caminho de importação
+const Consulta = require('../models/Consulta');
 
 // Listar todas as consultas
 exports.listConsultas = async (req, res) => {
@@ -9,7 +6,7 @@ exports.listConsultas = async (req, res) => {
     const consultas = await Consulta.findAll();
     res.json(consultas);
   } catch (error) {
-    console.error(error);
+    console.error('Erro ao buscar as consultas:', error);
     res.status(500).json({ message: 'Erro ao buscar as consultas' });
   }
 };

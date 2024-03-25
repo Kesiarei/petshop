@@ -1,10 +1,10 @@
-// Header.js
 import React from 'react';
+import './Header.css'; // Importa o arquivo CSS para estilização
 
 const Header = () => {
   return (
-    <header>
-      <h1>Meu Pet Shop</h1>
+    <header className="header">
+      <h1 className="header-title">Meu Pet Shop</h1>
     </header>
   );
 };
